@@ -7,6 +7,7 @@ func main() {
 		nome = "levir"
 		idade int = 21
 	)
+	
 	fmt.Println("Hello,World")
 	for i:= 1; i<100 ; i= i +1{
 		fmt.Println("numero : ",i)
