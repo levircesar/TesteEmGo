@@ -1,10 +1,12 @@
+/*** Levir César Ribeiro Lemos ***/
+
 package main 
 
 import "fmt"
 
 import "math"
 
-//criar funcao
+//Criar funcao
 func soma(x int,y int) int{
 	return x + y
 }
