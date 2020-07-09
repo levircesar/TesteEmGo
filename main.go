@@ -1,6 +1,7 @@
 package main 
 
 import "fmt"
+
 import "math"
 
 //criar funcao
@@ -16,7 +17,7 @@ func diminuir(x float64,y float64) (total float64){
 //funcao com entrada variavel
 func somaVariavel(numeros ...float64)(total float64){
 	for _, numero:= range numeros{
-		total = numero+numero
+		total +=numero
 	}
 	return
 }
@@ -31,7 +32,7 @@ func main() {
 
 	//laço de repeticao básico
 	fmt.Println("Hello,World")
-	for i:= 1; i<=10 ; i= i +1{
+	for i:= 1; i<=5 ; i= i +1{
 		fmt.Println("numero : ",i)
 	}
 
@@ -46,7 +47,7 @@ func main() {
 	fmt.Println("A somaVariavel de 1,2,3,4,5 = " , somaVariavel(1,2,3,4,5))
 
 	//laco de repeticao para array
-	a:= []float64{10,20,30,40,50,4,5.78,9.100}
+	a:= []float64{10.5,20,30.5}
 
 	for i, v:=range a{
 		fmt.Println("posicao no vetor: ",i," valor: ",v)
@@ -76,11 +77,19 @@ func main() {
 	fmt.Scan(&entrada)
 	fmt.Println("Você escreveu : ",entrada)
 	fmt.Println("adicione 3 valores ao array : ")
-	b:= make([]float64,0)
+	/*
+		b := []float64{0,1,2}
+		for i:= 0; i<=2 ; i= i +1{
+			fmt.Print("numero : ")
+			fmt.Scanf("%f",&b[i])
+		}
+	*/
+	var b []float64
 	for i:= 0; i<=2 ; i= i +1{
-		fmt.Println("numero : ")
-		fmt.Scan(&entrada)
-		b = append(b,entrada)
+		var j float64;
+		fmt.Print("incluir no vetor : ")
+		fmt.Scan(&j)
+		b = append(b,j)
 	}
 	fmt.Println("valores do vetor b = ", b)
 	fmt.Println("Soma dos valores do vetor b =  " , somaVariavel(b...))
