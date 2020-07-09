@@ -37,7 +37,15 @@ func main() {
 	//concatenar string
 	fmt.Println("meu nick no githube: " ,nome+sobrenome)
 
+	//criar Slice vazio
+	meuSlice := make([]int,0)
+	meuSlice = append(meuSlice,3)
+	meuSlice = append(meuSlice,74)
+	meuSlice = append(meuSlice,53)
+	fmt.Println("tamanho do slice : ", len(meuSlice))
+	fmt.Println("capacidade do slice : ", cap(meuSlice))
+	fmt.Println("tudo do slice : ",meuSlice)
+
 	//fim
 	fmt.Println("fim")
-
 }
