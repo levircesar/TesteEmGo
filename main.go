@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//criar funcao
 func soma(x int,y int) int{
 	return x + y
 }
@@ -10,8 +11,9 @@ func soma(x int,y int) int{
 func main() {
 	//declarar variaveis
 	var(
-		nome = "levir"
+		nome string= "Levir"
 		idade int = 21
+		sobrenome string = "cesar"
 	)
 
 	//laço de repeticao absico
@@ -31,6 +33,9 @@ func main() {
 	for i, v:=range a{
 		fmt.Println("posicao no vetor: ",i," valor: ",v)
 	}
+
+	//concatenar string
+	fmt.Println("meu nick no githube: " ,nome+sobrenome)
 
 	//fim
 	fmt.Println("fim")
