@@ -46,7 +46,7 @@ func main() {
 	fmt.Println("A somaVariavel de 1,2,3,4,5 = " , somaVariavel(1,2,3,4,5))
 
 	//laco de repeticao para array
-	a:= []float64{10,20,30,40,50}
+	a:= []float64{10,20,30,40,50,4,5.78,9.100}
 
 	for i, v:=range a{
 		fmt.Println("posicao no vetor: ",i," valor: ",v)
@@ -69,6 +69,21 @@ func main() {
 
 	//importado da math
 	fmt.Println("cos de 30 : ", math.Cos(30))
+
+	//Input 
+	var entrada float64
+	fmt.Printf("Digite um numero: ")
+	fmt.Scan(&entrada)
+	fmt.Println("Você escreveu : ",entrada)
+	fmt.Println("adicione 3 valores ao array : ")
+	b:= make([]float64,0)
+	for i:= 0; i<=2 ; i= i +1{
+		fmt.Println("numero : ")
+		fmt.Scan(&entrada)
+		b = append(b,entrada)
+	}
+	fmt.Println("valores do vetor b = ", b)
+	fmt.Println("Soma dos valores do vetor b =  " , somaVariavel(b...))
 
 	//fim
 	fmt.Println("fim")
