@@ -32,7 +32,7 @@ func main() {
 
 	//laço de repeticao básico
 	fmt.Println("Hello,World")
-	for i:= 1; i<=5 ; i= i +1{
+	for i:= 1; i<=3 ; i= i +1{
 		fmt.Println("numero : ",i)
 	}
 
@@ -76,22 +76,19 @@ func main() {
 	fmt.Printf("Digite um numero: ")
 	fmt.Scan(&entrada)
 	fmt.Println("Você escreveu : ",entrada)
-	fmt.Println("adicione 3 valores ao array : ")
-	/*
-		b := []float64{0,1,2}
-		for i:= 0; i<=2 ; i= i +1{
-			fmt.Print("numero : ")
-			fmt.Scanf("%f",&b[i])
-		}
-	*/
+	
+	//Adicionar valor no vetor usando append
 	var b []float64
+	fmt.Println("valores iniciais do vetor b = ", b)
+	fmt.Println("adicione 3 valores ao array : ")
 	for i:= 0; i<=2 ; i= i +1{
 		var j float64;
 		fmt.Print("incluir no vetor : ")
 		fmt.Scan(&j)
 		b = append(b,j)
 	}
-	fmt.Println("valores do vetor b = ", b)
+
+	fmt.Println("valores finais do vetor b = ", b)
 	fmt.Println("Soma dos valores do vetor b =  " , somaVariavel(b...))
 
 	//fim
