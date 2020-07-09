@@ -1,6 +1,7 @@
 package main 
 
 import "fmt"
+import "math"
 
 //criar funcao
 func soma(x int,y int) int{
@@ -45,6 +46,9 @@ func main() {
 	fmt.Println("tamanho do slice : ", len(meuSlice))
 	fmt.Println("capacidade do slice : ", cap(meuSlice))
 	fmt.Println("tudo do slice : ",meuSlice)
+
+	//importado da math
+	fmt.Println("cos de 30 : ", math.Cos(30))
 
 	//fim
 	fmt.Println("fim")
