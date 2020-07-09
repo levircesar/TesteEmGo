@@ -1,4 +1,4 @@
-/***Algoritmo quicksort***/
+/***Algoritmo quicksort!***/
 
 package main
 
