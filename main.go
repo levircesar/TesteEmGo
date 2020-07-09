@@ -35,17 +35,25 @@ func main() {
 		fmt.Println("numero : ",i)
 	}
 
-	//chamando funcao
+	//chamando funcao simples
 	fmt.Println("A soma de 5 + 10 = " , soma(5,10))
 	fmt.Println("Meu nome é : " ,nome, "e tenho ",idade," anos")
+
+	//chamada de funcao que retorna variável
 	fmt.Println("A operacao de 5.25 - 10 = " , diminuir(5.25,10))
+
+	//chamada de funcao com parametro variável
 	fmt.Println("A somaVariavel de 1,2,3,4,5 = " , somaVariavel(1,2,3,4,5))
+
 	//laco de repeticao para array
-	a:= []int{10,20,30,40,50}
+	a:= []float64{10,20,30,40,50}
 
 	for i, v:=range a{
 		fmt.Println("posicao no vetor: ",i," valor: ",v)
 	}
+
+	//Passar array para funcao
+	fmt.Println("Soma dos valores do array =  " , somaVariavel(a...))
 
 	//concatenar string
 	fmt.Println("meu nick no githube: " ,nome+sobrenome)
