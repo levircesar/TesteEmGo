@@ -7,7 +7,19 @@ import "math"
 func soma(x int,y int) int{
 	return x + y
 }
+//retornar variavel na funcao
+func diminuir(x float64,y float64) (total float64){
+	total = x - y
+	return
+}
 
+//funcao com entrada variavel
+func somaVariavel(numeros ...float64)(total float64){
+	for _, numero:= range numeros{
+		total = numero+numero
+	}
+	return
+}
 
 func main() {
 	//declarar variaveis
@@ -17,7 +29,7 @@ func main() {
 		sobrenome string = "cesar"
 	)
 
-	//laço de repeticao absico
+	//laço de repeticao básico
 	fmt.Println("Hello,World")
 	for i:= 1; i<=10 ; i= i +1{
 		fmt.Println("numero : ",i)
@@ -25,9 +37,9 @@ func main() {
 
 	//chamando funcao
 	fmt.Println("A soma de 5 + 10 = " , soma(5,10))
-
 	fmt.Println("Meu nome é : " ,nome, "e tenho ",idade," anos")
-
+	fmt.Println("A operacao de 5.25 - 10 = " , diminuir(5.25,10))
+	fmt.Println("A somaVariavel de 1,2,3,4,5 = " , somaVariavel(1,2,3,4,5))
 	//laco de repeticao para array
 	a:= []int{10,20,30,40,50}
 
