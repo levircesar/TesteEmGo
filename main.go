@@ -89,9 +89,30 @@ func main() {
 		fmt.Scan(&j)
 		b = append(b,j)
 	}
-
 	fmt.Println("valores finais do vetor b = ", b)
 	fmt.Println("Soma dos valores do vetor b =  " , somaVariavel(b...))
+
+	//Adicionar no vetor usando switch
+	var c []float64
+	var k float64 
+	var caso string
+	var flag bool = true
+	for flag ==true{
+	fmt.Println("digita add/end")
+	fmt.Scan(&caso)
+		switch {
+			case caso =="add":
+				fmt.Print("incluir no vetor : ")
+				fmt.Scan(&k)
+				c = append(c,k)
+			case caso =="end":
+				flag = false
+			default:
+				fmt.Print("use add ou end ")
+		}
+	}
+	fmt.Println("valores finais do vetor c = ", c)
+	fmt.Println("Soma dos valores do vetor c =  " , somaVariavel(c...))
 
 	//fim
 	fmt.Println("fim")
