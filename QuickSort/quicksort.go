@@ -1,4 +1,4 @@
-/***Algoritmo quicksort!recuperado***/
+/***Algoritmo quicksort! modificacao: entrada aceita float64***/
 
 package main
 
@@ -10,10 +10,10 @@ import (
 
 func main(){
 	entrada := os.Args[1:]
-	numeros := make([]int , len(entrada))
+	numeros := make([]float64 , len(entrada))
 
 	for i,n := range entrada {
-		numero, err := strconv.Atoi(n)
+		numero, err := strconv.ParseFloat(n,64)
 		if err != nil{
 			fmt.Printf("%s nao é um numero valido! \n",n)
 			os.Exit(1)
@@ -24,12 +24,12 @@ func main(){
 	fmt.Println(quicksort(numeros))
 } 
 
-func quicksort(numeros []int) []int {
+func quicksort(numeros []float64) []float64 {
 	if len(numeros )<= 1 {
 		return numeros
 	}
 
-	n := make ([]int , len(numeros))
+	n := make ([]float64 , len(numeros))
 	copy(n,numeros)
 
 	indicePivo := len(n)/2
@@ -41,7 +41,7 @@ func quicksort(numeros []int) []int {
 	return append(append(quicksort(menores), pivo), quicksort(maiores)...)
 }
 
-func particionar(numeros []int , pivo int) (menores []int , maiores []int){
+func particionar(numeros []float64 , pivo float64) (menores []float64 , maiores []float64){
 	for _,n := range numeros{
 		if n<= pivo{
 			menores = append(menores,n)
